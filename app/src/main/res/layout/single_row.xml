@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="25dp">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#DFD897"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <!--The weight sum property is used to divide the layout into
+        different parts and then giving each layout a particular weight
+        gives it that amount of space on the screen-->
+
+
+        <!--Since each parent layout will have a specific weight, we need
+        not give any width to those layout-->
+
+        <ImageView
+            android:id="@+id/imgUserImage"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1.5"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5">
+
+            <TextView
+                android:id="@+id/txtQuestionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:padding="6dp"
+                android:text="Question Title"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtOwnerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtQuestionTitle"
+                android:padding="6dp"
+                android:text="Owner Name"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtOwnerName"
+                android:layout_alignParentBottom="true"
+                android:padding="0dp"
+                android:paddingEnd="5dp"
+                android:text="Rs. 299"
+                android:textAlignment="textEnd"
+                android:textColor="#357a38"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
